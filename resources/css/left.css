@@ -1,0 +1,8 @@
+a{
+	text-decoration: none;
+}
+/*鼠标悬停时的样式*/
+a:hover{
+	color: red;
+	text-decoration: underline;
+}

@@ -1,0 +1,12 @@
+body{
+	background-image: url("../img/bg.jpg");
+}
+
+h1{
+	text-align: center;
+}
+
+#loginTable{
+	text-align: center;
+	margin: auto;
+}

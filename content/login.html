@@ -1,0 +1,85 @@
+﻿<html>
+	<head>
+		<!-- 字符编码设置 -->
+		<meta http-equiv="Content-type" content="text/html;charset=utf-8" />
+		<link rel="stylesheet" type="text/css" href="../resources/css/login.css">
+		<!-- 加载javascript脚本文件 -->
+		<script type="text/javascript" language="javascript" src="../resources/js/jquery-1.6.2.js"></script>
+		
+		<script type="text/javascript">
+			// 定义函数-判断用户名密码是否填写
+			function checkUser()
+			{
+				
+				// 定义变量存放用户名
+				var name = document.getElementById("#username");
+				// 定义变量存放密码
+				var passwd = document.getElementById("#passwd");
+				if(name == null || passwd == null) {
+					alert("请输入用户名或密码！");
+					return false;  //不提交数据到服务器
+				}
+				else {
+					alert("登录成功！");
+					return true; //提交数据到服务器
+				}
+			}
+		</script>
+
+	</head>
+	<body>
+		<h1>欢迎您来到登录页面</h1>
+		<form method="post" action="./main.html" onsubmit="return checkUser();">
+			<table id="loginTable">
+				<!-- <thead></thead> -->
+				<tbody>
+					<tr>
+						<td>方 式:</td>
+						<td>
+						<select id="loginType" selected>
+							<option value="1">诺基亚</option>
+							<option value="2">苹果</option>
+							<option value="3">三星</option>
+							<option value="3">小米</option>
+							<option value="4">华为</option>
+						</select>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<input type="checkbox" name="interests"/><label>足球</label>
+							<input type="checkbox" name="interests"/><label>篮球</label>
+							<input type="checkbox" name="interests"/><label>爬山</label>
+							<br/>
+							<input type="checkbox" name="interests"/><label>游泳</label>
+							<input type="checkbox" name="interests"/><label>台球</label>
+							<input type="checkbox" name="interests"/><label>看书</label>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							用户名：
+						</td>
+						<td>
+							<input type="text" id="username" />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							密  码：
+						</td>
+						<td>
+							<input type="password" id="passwd" />
+						</td>
+					</tr>
+					<tr>
+						<td><input type="submit" value="登录" /></td>
+						<td><input type="reset" value="清空" /></td>
+					</tr>
+				</tbody>
+				<!-- <tfoot></tfoot> -->
+			</table>
+		</form>	
+	</body>
+
+</html>
